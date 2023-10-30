@@ -38,7 +38,8 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-async function writeToFile(fs, data) {
+async function writeToFile(data) {
+  console.log(data);
   const file = await generateMarkdown(data);
   fs.writeFile("ReadMe.md", file, (err) => {
     if (err) {

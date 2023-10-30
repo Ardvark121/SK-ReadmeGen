@@ -49,6 +49,7 @@ async function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 async function generateMarkdown(data) {
+  console.log(data);
   const licensesect = await renderLicenseSection(data.License);
   const markdown = `# ${data.Name}
   # Description
@@ -59,6 +60,7 @@ async function generateMarkdown(data) {
   ${data.Contributing}
   # Test
   ${data.Test}
+  # License
   ${licensesect}`;
   return markdown;
 }
